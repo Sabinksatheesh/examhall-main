@@ -103,11 +103,11 @@ const Register = () => {
     }
 
     return (
-        <div className="flex flex-row items-center justify-between h-screen bg-login-signup">
+        <div className="flex flex-row items-center justify-between h-screen bg-login-signup bg-no-repeat bg-cover bg-center">
             <div>
                 <h1>.</h1>
             </div>
-            <div className="flex flex-col items-center justify-center h-screen w-[25rem] px-14 bg-[#D9D9D9]">
+            <div className="flex flex-col items-center justify-center h-screen w-[25rem] px-14 bg-[#FFF7ED]">
                 <div className="flex flex-col items-center justify-center h-screen w-full">
                     <h1 className="text-3xl text-center text-green-medium tracking-wide font-normal mb-10 font-Outfit-Medium">REGISTER</h1>
                     <div className={errMsg ? "flex flex-row items-center p-2 h-10 w-full border border-red-600 rounded-[10px] bg-red-200 text-red-600  mb-2" : "h-0 w-0 absolute left-[-9999px]"}>
