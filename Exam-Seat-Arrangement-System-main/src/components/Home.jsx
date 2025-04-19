@@ -13,7 +13,7 @@ function Home() {
         <div className="flex flex-col bg-background flex-grow md:w-5/6">
 
             <div className="flex-auto flex">
-                <div className="bg-green-save flex-1 flex items-center px-16 py-7 drop-shadow-lg rounded-br-3xl">
+                <div className="bg-brown-save flex-1 flex items-center px-16 py-7 drop-shadow-lg rounded-br-3xl">
                     <p className="font-Outfit-ExtraBold text-5xl text-white tracking-wide leading-snug drop-shadow-lg">Managing exams, made easier</p>
                 </div>
                 <div className={`bg-background flex-none flex items-center py-3 ${isReqWidth ? "px-3" : "px-16"}`}>
@@ -33,16 +33,16 @@ function Home() {
                         <img src={allocate} className="h-16" alt="Seat Allocation" />
                     </div>
                     <div className={`flex ${isReqWidth ? "flex-col py-5" : "flex-row py-1 px-28 "}`}>
-                        <div className="h-3 w-3 transform rotate-45 border-2 border-green-dark">
-                            <div className="w-2 h-2 rounded-full bg-green-dark"></div>
+                        <div className="h-3 w-3 transform rotate-45 border-2 border-brown-dark">
+                            <div className="w-2 h-2 rounded-full bg-brown-dark"></div>
                         </div>
-                        <div className={`${isReqWidth ? "mx-[5px] h-full w-0 border-r" : "my-[5px] w-full h-0 border-t"} border-dashed border-green-dark`}></div>
-                        <div className="h-3 w-3 transform rotate-45 border-2 border-green-dark">
-                            <div className="w-2 h-2 rounded-full bg-green-dark"></div>
+                        <div className={`${isReqWidth ? "mx-[5px] h-full w-0 border-r" : "my-[5px] w-full h-0 border-t"} border-dashed border-brown-dark`}></div>
+                        <div className="h-3 w-3 transform rotate-45 border-2 border-brown-dark">
+                            <div className="w-2 h-2 rounded-full bg-brown-dark"></div>
                         </div>
-                        <div className={`${isReqWidth ? "mx-[5px] h-full w-0 border-r" : "my-[5px] w-full h-0 border-t"} border-dashed border-green-dark`}></div>
-                        <div className="h-3 w-3 transform rotate-45 border-2 border-green-dark">
-                            <div className="w-2 h-2 rounded-full bg-green-dark"></div>
+                        <div className={`${isReqWidth ? "mx-[5px] h-full w-0 border-r" : "my-[5px] w-full h-0 border-t"} border-dashed border-brown-dark`}></div>
+                        <div className="h-3 w-3 transform rotate-45 border-2 border-brown-dark">
+                            <div className="w-2 h-2 rounded-full bg-brown-dark"></div>
                         </div>
                     </div>
                     <div className={`flex ${isReqWidth ? "flex-col gap-5" : "flex-row gap-10"} justify-between font-normal font-Outfit-Light`}>
@@ -55,7 +55,7 @@ function Home() {
 
             <div className="p-3 flex flex-row justify-between items-center">
                 <img src={muthoot} className="h-5 opacity-50" alt="muthoot logo" />
-                <div className="flex flex-row gap-5 pr-2 font-Outfit-Light text-green-dark">
+                <div className="flex flex-row gap-5 pr-2 font-Outfit-Light text-brown-dark">
                     <p className="hover:underline cursor-pointer">About</p>
                     <p className="hover:underline cursor-pointer ">Contact</p>
                 </div>

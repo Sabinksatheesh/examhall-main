@@ -109,14 +109,14 @@ const Register = () => {
             </div>
             <div className="flex flex-col items-center justify-center h-screen w-[25rem] px-14 bg-[#FFF7ED]">
                 <div className="flex flex-col items-center justify-center h-screen w-full">
-                    <h1 className="text-3xl text-center text-green-medium tracking-wide font-normal mb-10 font-Outfit-Medium">REGISTER</h1>
+                    <h1 className="text-3xl text-center text-brown-medium tracking-wide font-normal mb-10 font-Outfit-Medium">REGISTER</h1>
                     <div className={errMsg ? "flex flex-row items-center p-2 h-10 w-full border border-red-600 rounded-[10px] bg-red-200 text-red-600  mb-2" : "h-0 w-0 absolute left-[-9999px]"}>
                         <FontAwesomeIcon icon={faExclamationCircle} className="h-4 p-2" />
                         <p ref={errRef} className="font-Outfit-Regular text-sm pl-1" aria-live="assertive">{errMsg}</p>
                     </div>
                     <form onSubmit={(e) => handleSubmit(e)} className="space-y-3 w-full">
                         <div className="flex flex-col">
-                            <label htmlFor="username" className="text-green-medium tracking-wide font-Outfit-Light mb-2">
+                            <label htmlFor="username" className="text-brown-medium tracking-wide font-Outfit-Light mb-2">
                                 Username
                             </label>
                             <input
@@ -147,7 +147,7 @@ const Register = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="email" className="text-green-medium tracking-wide font-Outfit-Light mb-2">
+                            <label htmlFor="email" className="text-brown-medium tracking-wide font-Outfit-Light mb-2">
                                 Email
                             </label>
                             <input
@@ -175,7 +175,7 @@ const Register = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="password" className="text-green-medium tracking-wide font-Outfit-Light mb-2">
+                            <label htmlFor="password" className="text-brown-medium tracking-wide font-Outfit-Light mb-2">
                                 Password
                             </label>
                             <div className={`flex flex-row items-center w-full h-12 rounded-[10px] shadow-sm ${pwdFocus && !pwd ? "ring ring-black ring-opacity-40" : ""} 
@@ -209,7 +209,7 @@ const Register = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="confirm_pwd" className="text-green-medium tracking-wide font-Outfit-Light mb-2">
+                            <label htmlFor="confirm_pwd" className="text-brown-medium tracking-wide font-Outfit-Light mb-2">
                                 Confirm Password
                             </label>
                             <div className={`flex flex-row items-center w-full h-12 rounded-[10px] shadow-sm ${matchFocus && !matchPwd ? "ring ring-black ring-opacity-40" : ""} 
@@ -240,7 +240,7 @@ const Register = () => {
 
                         <div className="flex items-center justify-center pt-5">
                             <button type="submit"
-                                className="border bg-green-medium tracking-wider hover:bg-opacity-25 hover:text-green-medium hover:border-green-medium  text-white font-Outfit-Bold py-3 px-7 rounded-[30px] focus:outline-none focus:shadow-outline select-none"
+                                className="border bg-brown-medium tracking-wider hover:bg-opacity-25 hover:text-brown-medium hover:border-brown-medium  text-white font-Outfit-Bold py-3 px-7 rounded-[30px] focus:outline-none focus:shadow-outline select-none"
                             >Sign Up
                             </button>
                         </div>

@@ -215,14 +215,14 @@ export default function SeatAllocation() {
       <div className="bg-background px-8 pt-4 flex flex-col st:flex-row justify-between">
         <div className="flex flex-row mt-6 items-center">
           <h2 className="text-xl font-Outfit-Bold"><span className="whitespace-nowrap">SELECT DATE</span></h2>
-          <select ref={dateRef} onChange={handleExams} className="h-10 px-3 py-2 ml-5 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-green-login">
+          <select ref={dateRef} onChange={handleExams} className="h-10 px-3 py-2 ml-5 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-brown-login">
             {dates.map(item => <option key={item} value={item}>{item}</option>)}
           </select>
         </div>
 
         <div className="flex flex-row mt-6 items-center">
           <h2 className="text-xl font-Outfit-Bold"><span className="whitespace-nowrap">SELECT TIME</span></h2>
-          <select ref={timeRef} defaultValue={"FN"} onChange={handleExams} className="h-10 px-3 py-2 ml-6 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-green-login">
+          <select ref={timeRef} defaultValue={"FN"} onChange={handleExams} className="h-10 px-3 py-2 ml-6 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-brown-login">
             <option value="FN">FN</option>
             <option value="AN">AN</option>
           </select>
@@ -230,7 +230,7 @@ export default function SeatAllocation() {
 
         <div className="flex flex-row mt-6 items-center">
           <h2 className="text-xl font-Outfit-Bold"><span className="whitespace-nowrap">EXAMS SCHEDULED</span></h2>
-          <select ref={examRef} className="h-10 px-3 py-2 ml-4 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-green-login">
+          <select ref={examRef} className="h-10 px-3 py-2 ml-4 rounded-[20px] shadow-sm border-gray-300 min-w-[200px] focus:outline-none focus:ring-2 focus:ring-brown-login">
             {exams.map(item => <option key={item} value={item}>{item}</option>)}
           </select>
         </div>
@@ -256,14 +256,14 @@ export default function SeatAllocation() {
                   type="text"
                   id="search"
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="p-2 ml-2 flex-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-login text-gray-600"
+                  className="p-2 ml-2 flex-1 rounded-md focus:outline-none focus:ring-2 focus:ring-brown-login text-gray-600"
                   placeholder="Search"
                 />
               </div>
               {/* Sort By Dropdown */}
               <div className="flex-grow flex flex-row items-center ">
                 <p className="ml-2 whitespace-nowrap">Sort By :</p>
-                <select className="min-w-[156px] p-[10.4px] m-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-login text-gray-600"
+                <select className="min-w-[156px] p-[10.4px] m-1 rounded-md focus:outline-none focus:ring-2 focus:ring-brown-login text-gray-600"
                   defaultValue="min" onChange={(e) => setSortTerm(e.target.value)}>
                   <option value="min">Increasing capacity</option>
                   <option value="max">Decreasing capacity</option>
@@ -294,9 +294,9 @@ export default function SeatAllocation() {
             <ul className="pl-3 hw:pb-5 mt-4 font-Outfit-Regular">
               <li className="p-3">Total Rooms : {rooms.length}</li>
               <li className="p-3">Available Seats : {bookedRooms.length > 0 ? 0 : totalCapacity - seatSelected}</li>
-              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-green-save"} `}>Rooms Selected : {bookedRooms.length > 0 ? bookedRooms.length : selectedRooms.length}</li>
-              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-green-save"} `}>Seats Selected : {seatSelected} </li>
-              <li className={`p-3 ${seatSelected < studentsCount ? "text-red-500" : "text-green-save"}`}>
+              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-brown-save"} `}>Rooms Selected : {bookedRooms.length > 0 ? bookedRooms.length : selectedRooms.length}</li>
+              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-brown-save"} `}>Seats Selected : {seatSelected} </li>
+              <li className={`p-3 ${seatSelected < studentsCount ? "text-red-500" : "text-brown-save"}`}>
   Remaining : {Math.max(studentsCount - seatSelected, 0)}
 </li>
  <li className="p-3">Total Participants : {studentsCount}</li>
@@ -311,7 +311,7 @@ export default function SeatAllocation() {
           </div>
           <div className="flex flex-row gap-10">
             <button className="bg-green-500 hover:bg-green-400 text-white font-Outfit-Bold h-10 w-[10rem] rounded-[20px]" type="button" onClick={handleRooms}>ARRANGE</button>
-            <button className="bg-green-medium hover:bg-green-light text-white font-Outfit-Bold h-10 w-[10rem] rounded-[20px]" type="button" onClick={handleExcels}>RECEIVE MAIL</button>
+            <button className="bg-brown-medium hover:bg-brown-light text-white font-Outfit-Bold h-10 w-[10rem] rounded-[20px]" type="button" onClick={handleExcels}>RECEIVE MAIL</button>
           </div>
         </div>
       </div>
