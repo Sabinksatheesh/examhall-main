@@ -5,13 +5,15 @@ const createBranches = require('../createBranches');
 
 const getSubcode = async (req, res) => {
     const { sem, branch, slot } = req.query;
+    console.log( sem, branch, slot);
+    
     if (!branch || !slot) return res.status(400).json({ 'message': 'provide branch and slot' });
     // enter branch and slot in capital letters
     try {
         const slots = await Slot.findOne({ sem: sem, branch: branch, slot: slot });
         
         // const slots = await Slot.find();
-        // console.log(slots);
+        console.log(slots);
         
         // sending only subcode array
         res.send(slots.subcode);
