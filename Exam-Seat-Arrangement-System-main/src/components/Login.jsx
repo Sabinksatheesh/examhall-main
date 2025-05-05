@@ -72,14 +72,14 @@ export default function Login() {
             </div>
             <div className="flex flex-col items-center justify-between h-screen w-[25rem] px-14 bg-[#FFF7ED]">
                 <div className="flex flex-col items-center justify-center h-screen w-full">
-                    <h1 className="text-3xl text-center text-green-medium tracking-wide font-normal mb-10 font-Outfit-Medium">LOG IN</h1>
+                    <h1 className="text-3xl text-center text-brown-medium tracking-wide font-normal mb-10 font-Outfit-Medium">LOG IN</h1>
                     <div className={errMsg ? "flex flex-rows items-center p-2 h-10 w-full border border-red-600 rounded-[10px] bg-red-200 text-red-600  mb-2" : "h-0 w-0 absolute left-[-9999px]"}>
                         <FontAwesomeIcon icon={faExclamationCircle} className="h-4 p-2" />
                         <p ref={errRef} className="font-Outfit-Regular text-sm pl-1" aria-live="assertive">{errMsg}</p>
                     </div>
                     <form className="space-y-6 w-full" onSubmit={handleSubmit}>
                         <div>
-                            <label className="text-green-medium tracking-wide font-Outfit-Light select-none" htmlFor="username">Username</label>
+                            <label className="text-brown-medium tracking-wide font-Outfit-Light select-none" htmlFor="username">Username</label>
                             <input
                                 className="mt-2 w-full h-12 px-3 py-2 rounded-[10px] shadow-sm focus:outline-none focus:ring focus:ring-black focus:ring-opacity-40"
                                 type="text"
@@ -93,7 +93,7 @@ export default function Login() {
                                 spellcheck="false" />
                         </div>
                         <div>
-                            <label className=" text-green-medium tracking-wide font-Outfit-Light select-none" htmlFor="password">Password</label>
+                            <label className=" text-brown-medium tracking-wide font-Outfit-Light select-none" htmlFor="password">Password</label>
                             <div className={`mt-2 flex flex-row items-center w-full h-12 rounded-[10px] shadow-sm ${pwdFocus ? "ring ring-black ring-opacity-40" : ""}`}>
                                 <input
                                     className="h-12 w-full px-3 py-2 rounded-l-[10px] outline-none"
@@ -112,7 +112,7 @@ export default function Login() {
                         </div>
                         <div className="flex justify-center items-center pt-3 ">
                             <button
-                                className="border bg-green-medium tracking-wider hover:bg-opacity-25 hover:text-green-medium hover:border-green-medium  text-white font-Outfit-Bold py-3 px-7 rounded-[30px] focus:outline-none focus:shadow-outline select-none"
+                                className="border bg-brown-medium tracking-wider hover:bg-opacity-25 hover:text-brown-medium hover:border-brown-medium  text-white font-Outfit-Bold py-3 px-7 rounded-[30px] focus:outline-none focus:shadow-outline select-none"
                                 type="submit">
                                 Sign In
                             </button>
