@@ -288,17 +288,40 @@ export default function SeatAllocation() {
             </div>
           </div>
           <div className="border border-black border-opacity-50 h-full min-w-[300px] self-center rounded-lg flex flex-col ml-5 hw:w-full hw:mx-4 hw:mt-2">
-            {/* room for exam statistics */}
-            <h1 className="p-6 font-Outfit-Bold text-xl"> STATISTICS </h1>
-            <hr className="border-t border-black border-opacity-50 ml-5 mr-7"></hr>
-            <ul className="pl-3 hw:pb-5 mt-4 font-Outfit-Regular">
-              <li className="p-3">Total Rooms : {rooms.length}</li>
-              <li className="p-3">Available Seats : {bookedRooms.length > 0 ? 0 : totalCapacity - seatSelected}</li>
-              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-green-save"} `}>Rooms Selected : {bookedRooms.length > 0 ? bookedRooms.length : selectedRooms.length}</li>
-              <li className={`p-3 ${seatSelected < studentsCount && seatSelected !== 0 ? "text-red-500" : ""} ${seatSelected < studentsCount ? "" : "text-green-save"} `}>Seats Selected : {seatSelected} </li>
-              <li className={`p-3 ${seatSelected < studentsCount ? "text-red-500" : "text-green-save"}`}>
-  Remaining : {Math.max(studentsCount - seatSelected, 0)}
-</li>
+  {/* room for exam statistics */}
+  <h1 className="p-6 font-Outfit-Bold text-xl"> STATISTICS </h1>
+  <hr className="border-t border-black border-opacity-50 ml-5 mr-7" />
+  <ul className="pl-3 hw:pb-5 mt-4 font-Outfit-Regular">
+    <li className="p-3">Total Rooms : {rooms.length}</li>
+    <li className="p-3">Available Seats : {bookedRooms.length > 0 ? 0 : totalCapacity - seatSelected}</li>
+
+    <li className={`p-3 ${
+      seatSelected < studentsCount && seatSelected !== 0 
+        ? "text-red-500" 
+        : seatSelected >= studentsCount 
+          ? "text-green-600" 
+          : ""
+    }`}>
+      Rooms Selected : {bookedRooms.length > 0 ? bookedRooms.length : selectedRooms.length}
+    </li>
+
+    <li className={`p-3 ${
+      seatSelected < studentsCount && seatSelected !== 0 
+        ? "text-red-500" 
+        : seatSelected >= studentsCount 
+          ? "text-green-600" 
+          : ""
+    }`}>
+      Seats Selected : {seatSelected}
+    </li>
+
+    <li className={`p-3 ${
+      seatSelected < studentsCount 
+        ? "text-red-500" 
+        : "text-green-600"
+    }`}>
+      Remaining : {Math.max(studentsCount - seatSelected, 0)}
+    </li>
  <li className="p-3">Total Participants : {studentsCount}</li>
             </ul>
           </div>
